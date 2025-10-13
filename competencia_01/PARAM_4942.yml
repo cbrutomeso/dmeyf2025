@@ -1,0 +1,12 @@
+out:
+  lgbm:
+    mejores_hiperparametros:
+      learning_rate: 0.04481089925392504
+      feature_fraction: 0.5170503571975581
+      min_data_in_leaf: 296
+      num_leaves: 2341
+      max_depth: 14
+      lambda_l1: 0.4514108759697508
+      lambda_l2: 9.426450679561881
+      bagging_fraction: 0.886052537529134
+    y: 0.9522800675145107

@@ -1,0 +1,105 @@
+experimento: 4966
+semilla_primigenia: 100129
+semillas_ensemble:
+- 100129
+- 200357
+- 456791
+- 400429
+- 500459
+- 670373
+- 890173
+- 104729
+- 1299709
+- 15485863
+train:
+- 202102
+train_final:
+- 202104
+future:
+- 202104
+kaggle:
+- 202106
+semilla_kaggle: 314159
+cortes:
+- 6000
+- 6500
+- 7000
+- 7500
+- 8000
+- 8500
+- 9000
+- 9500
+- 10000
+- 10500
+- 11000
+- 11500
+- 12000
+- 12500
+- 13000
+- 13500
+- 14000
+- 14500
+- 15000
+- 15500
+- 16000
+- 16500
+- 17000
+- 17500
+- 18000
+- 18500
+- 19000
+trainingstrategy:
+  undersampling: 0.5
+hyperparametertuning:
+  validation_split: 0.2
+  hs:
+    num_iterations:
+      type: int
+      bounds: &id001
+      - 8
+      - 2048
+    learning_rate:
+      type: float
+      bounds:
+      - 0.01
+      - 0.3
+    feature_fraction:
+      type: float
+      bounds:
+      - 0.1
+      - 1.0
+    num_leaves:
+      type: int
+      bounds: *id001
+    min_data_in_leaf:
+      type: int
+      bounds:
+      - 1
+      - 8000
+  iteraciones: 50
+lgbm:
+  param_fijos:
+    boosting: gbdt
+    objective: binary
+    metric: auc
+    first_metric_only: false
+    boost_from_average: true
+    feature_pre_filter: false
+    force_row_wise: true
+    verbosity: -100
+    seed: 100129
+    max_depth: -1
+    min_gain_to_split: 0.0
+    min_sum_hessian_in_leaf: 0.001
+    lambda_l1: 0.0
+    lambda_l2: 0.0
+    max_bin: 31
+    bagging_fraction: 1.0
+    pos_bagging_fraction: 1.0
+    neg_bagging_fraction: 1.0
+    is_unbalance: false
+    scale_pos_weight: 1.0
+    drop_rate: 0.1
+    max_drop: 50
+    skip_drop: 0.5
+    extra_trees: false

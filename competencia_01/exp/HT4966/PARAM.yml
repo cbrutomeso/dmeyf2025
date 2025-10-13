@@ -1,0 +1,9 @@
+out:
+  lgbm:
+    mejores_hiperparametros:
+      learning_rate: 0.03257538928022147
+      feature_fraction: 0.9028902451091588
+      min_data_in_leaf: 3392
+      num_leaves: 251
+      num_iterations: 826
+    y: 0.9270072174165994
